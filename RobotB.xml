@@ -28,34 +28,34 @@
                         <field name="NUM">35</field>
                       </block>
                     </value>
+                    <next>
+                      <block type="controls_if" id="224" inline="false">
+                        <value name="IF0">
+                          <block type="logic_compare" id="254" inline="true">
+                            <field name="OP">GT</field>
+                            <value name="A">
+                              <block type="sensor_spectrometer" id="255">
+                                <field name="LIGHT">RED</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="262">
+                                <field name="NUM">93</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="movement_stop" id="279"></block>
+                        </statement>
+                      </block>
+                    </next>
                   </block>
                 </next>
               </block>
             </next>
           </block>
         </statement>
-        <next>
-          <block type="controls_if" id="224" inline="false">
-            <value name="IF0">
-              <block type="logic_compare" id="254" inline="true">
-                <field name="OP">GT</field>
-                <value name="A">
-                  <block type="sensor_spectrometer" id="255">
-                    <field name="LIGHT">RED</field>
-                  </block>
-                </value>
-                <value name="B">
-                  <block type="math_number" id="262">
-                    <field name="NUM">93</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <statement name="DO0">
-              <block type="movement_stop" id="279"></block>
-            </statement>
-          </block>
-        </next>
       </block>
     </next>
   </block>
