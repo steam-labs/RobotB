@@ -1,3 +1,22 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="10" x="207" y="99"></block>
+  <block type="movement_forward" id="10" x="175" y="39">
+    <next>
+      <block type="controls_repeat" id="79" inline="true">
+        <value name="TIMES">
+          <block type="math_number" id="86">
+            <field name="NUM">1000</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="oled_drawnumber" id="108" inline="true">
+            <value name="NUMBER">
+              <block type="sensor_spectrometer" id="93">
+                <field name="LIGHT">RED</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
 </xml>
